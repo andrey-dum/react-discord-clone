@@ -1,0 +1,90 @@
+.sidebar {
+    background: #2f3135;
+    height: 100vh;
+    display: flex;
+    flex: 0.25;
+    flex-direction: column;
+}
+.sidebar__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #2f3135;
+    color: #ffffff;
+    border-bottom: 3px solid #26282c;
+}
+
+.sidebar__channels {
+    flex: 1;
+}
+
+.sidebar__addChannel {
+    cursor: pointer;
+}
+.sidebar__addChannel:hover {
+    color: #ffffff;
+}
+
+.sidebar__cheannelsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #2f3135;
+    color: gray;
+}
+.sidebar__header {
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar sidebar__voice */
+.sidebar__voice,
+.sidebar__profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    color: gray;
+    border-top: 1px solid gray;
+}
+
+.sidebar__voiceIcon {
+    color: #4fb185;
+}
+.sidebar__voiceInfo {
+    flex: 1;
+    padding: 10px;
+}
+.sidebar__voiceInfo > h3 {
+    color: #4fb185;
+}
+.sidebar__voiceInfo > p {
+    font-size: smaller;
+}
+
+.sidebar__voiceIcons {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar__voiceIcons > .MuiSvgIcon-root {
+    padding: 10px;
+}
+
+/* Sidebar profile */
+.sidebar__profileInfo {
+     flex: 1;
+     padding: 10px;
+}
+.sidebar__profileInfo > h3 {
+    color: #fff;
+}
+
+.sidebar__profileIcons > .MuiSvgIcon-root {
+    padding: 10px;
+}
+.sidebar__profileIcons {
+    display: flex;
+    flex-direction: column;
+}
