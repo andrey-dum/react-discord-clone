@@ -1,11 +1,13 @@
 import React from 'react';
 import './index.css'
+import ChatHeader from '../ChatHeader/ChatHeader';
 
 
 const Chat = () => {
     return (
         <div className="chat">
-           <h1>Chat Component</h1>
+            <ChatHeader />
+
         </div>
     );
 }

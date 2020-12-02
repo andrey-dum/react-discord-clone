@@ -1,3 +1,7 @@
 .chat {
-    flex: 1;
+    display: flex;
+    flex: 0.75;
+    flex-direction: column;
+    background-color: #363a3f;
+    height: 100vh;
 }

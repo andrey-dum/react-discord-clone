@@ -1,6 +1,8 @@
 
+const API_KEY = process.env.FIREBASE_API_KEY;
+
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: API_KEY,
   authDomain: "discord-clone-925c1.firebaseapp.com",
   databaseURL: "https://discord-clone-925c1.firebaseio.com",
   projectId: "discord-clone-925c1",
