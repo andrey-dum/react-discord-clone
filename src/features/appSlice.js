@@ -7,8 +7,9 @@ export const appSlice = createSlice({
     channelName: null
   },
   reducers: {
-    setChannelId: (state, action) => {
-      state.app = action.payload;
+    setChannelInfo: (state, action) => {
+      state.channelId = action.payload.channelId;
+      state.channelName = action.payload.channelName;
     },
     // setChannelName: (state, action) => {
     //   state.channelName = action.payload;
@@ -17,15 +18,9 @@ export const appSlice = createSlice({
   },
 });
 
-export const { setChannelId } = appSlice.actions;
+export const { setChannelInfo } = appSlice.actions;
 
-// export const incrementAsync = amount => dispatch => {
-//   setTimeout(() => {
-//     dispatch(incrementByAmount(amount));
-//   }, 1000);
-// };
-
-export const selectChannelId = state => state.app.ChannelId;
-export const selectChannelName = state => state.app.ChannelName;
+export const selectChannelId = state => state.app.channelId;
+export const selectChannelName = state => state.app.channelName;
 
 export default appSlice.reducer;

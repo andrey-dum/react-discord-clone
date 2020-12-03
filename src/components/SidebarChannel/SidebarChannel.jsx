@@ -1,12 +1,24 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import './index.css'
+import { setChannelInfo } from '../../features/appSlice';
 
-const SidebarChannel = ({channel}) => {
+const SidebarChannel = ({id, channelName}) => {
+    const dispatch = useDispatch();
+
+    const handleSetChannelIinfo = () => {
+        dispatch(setChannelInfo({
+            channelId: id,
+            channelName
+        }))
+    }
+
     return (
-        <div className="sidebarChannel">
+        <div id={id} className="sidebarChannel" onClick={handleSetChannelIinfo}>
             <h4>
-                <span className="sidebarChannel__hash">#</span>{channel && channel.title}
+                <span className="sidebarChannel__hash">#</span>
+                {channelName && channelName}
             </h4>
         </div>
     );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css'
 
-import { useSelector } from 'react-redux'; 
+import { useSelector } from 'react-redux';
 
 import AddIcon from '@material-ui/icons/Add';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -61,8 +61,12 @@ const Sidebar = () => {
                 </div>
 
                 <div className="sidebar__channelsList">
-                    { channels.map((channel) => (
-                        <SidebarChannel key={channel.id} {...channel} />
+                    { channels.map(({id, channel}) => (
+                        <SidebarChannel 
+                            key={id} 
+                            id={id} 
+                            channelName={channel.title}
+                        />
                     )) }
                     
                 </div>
